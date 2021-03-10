@@ -103,14 +103,14 @@ dist
 # TernJS port file
 .tern-port
 
-# # Videos
-# videos/
+# Videos
+videos/
 
-# #Screenshots
-# screenshots/
+#Screenshots
+screenshots/
 
-# #results
-# results/
+#results
+results/
 
-# #reports
-# reports/
+#reports
+reports/
