@@ -1,0 +1,29 @@
+{
+  "name": "CypressPractice",
+  "version": "1.0.0",
+  "description": "CypressPractice",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf ./cypress/results/json/*.json",
+    "test": "cypress run",
+    "posttest": "generate-mochawesome-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NareshYeddula/CypressPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NareshYeddula/CypressPractice/issues"
+  },
+  "homepage": "https://github.com/NareshYeddula/CypressPractice#readme",
+  "dependencies": {
+    "cypress": "^6.6.0",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^1.3.0"
+  }
+}

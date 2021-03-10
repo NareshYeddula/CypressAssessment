@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-10T15:40:31.716Z",
+    "end": "2021-03-10T15:40:35.815Z",
+    "duration": 4099,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c47e9c22-6dba-4187-8592-d7c3e6203f59",
+      "title": "",
+      "fullFile": "cypress\\integration\\login.ts",
+      "file": "cypress\\integration\\login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff50c226-9494-463b-a647-f288855d2555",
+          "title": "All login tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login - Valid Credentials",
+              "fullTitle": "All login tests Login - Valid Credentials",
+              "timedOut": null,
+              "duration": 1177,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://trytestingthis.netlify.app/');\ncy.get('#uname').type('test');\ncy.get('#pwd').type('test');\ncy.get('[type=\"submit\"]').click();\n//Assertion\ncy.contains('Login Successful').should('have.text', 'Login Successful :) ');",
+              "err": {},
+              "uuid": "b7ae9f04-092c-43d7-b909-f665c7ecb811",
+              "parentUUID": "ff50c226-9494-463b-a647-f288855d2555",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login - Invalid Credentials",
+              "fullTitle": "All login tests Login - Invalid Credentials",
+              "timedOut": null,
+              "duration": 1214,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://trytestingthis.netlify.app/');\ncy.get('#uname').type('cde');\ncy.get('#pwd').type('e45');\ncy.get('[type=\"submit\"]').click();\n//asserting alert message is displayed\ncy.on('window:alert', function (txt) {\n    expect(txt).to.be.equal('Wrong Credentials! Try again!');\n});\ncy.get('.side').scrollTo('bottom');\n//asserting Login button is visible\ncy.get('[type=\"submit\"]').should('be.visible');",
+              "err": {},
+              "uuid": "fc8037ae-eccc-44e7-87a8-9e14aec863ab",
+              "parentUUID": "ff50c226-9494-463b-a647-f288855d2555",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7ae9f04-092c-43d7-b909-f665c7ecb811",
+            "fc8037ae-eccc-44e7-87a8-9e14aec863ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2391,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
